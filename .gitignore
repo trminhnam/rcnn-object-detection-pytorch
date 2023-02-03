@@ -1,0 +1,5 @@
+# ignore python cache folders
+(__pycache__/*)
+
+# ignore dataset
+dataset/*
