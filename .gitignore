@@ -3,3 +3,6 @@
 
 # ignore dataset
 dataset/*
+
+# ignore output
+output/*
