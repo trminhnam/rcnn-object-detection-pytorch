@@ -1,6 +1,8 @@
+import random
+
 import cv2
 import numpy as np
-import random
+
 
 def calculate_IoU(bbox1, bbox2):
     """Calculate the Intersection over Union (IoU) of two bounding boxes.

@@ -1,9 +1,8 @@
+from collections import OrderedDict
+
 import torch
 import torch.nn as nn
 
-from collections import OrderedDict
-
-from collections import OrderedDict
 
 class RCNN(nn.Module):
     def __init__(self, backbone, classes):

@@ -1,10 +1,12 @@
 import os
-import cv2
-import torch
-import streamlit as st
-import torchvision
-import requests
 from io import BytesIO
+
+import cv2
+import requests
+import streamlit as st
+import torch
+import torchvision
+
 from src.model import RCNN
 from src.run import detect
 

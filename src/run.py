@@ -1,15 +1,18 @@
 # add current directory to path
 import os
 import sys
+
 sys.path.append(os.getcwd())
 sys.path.append(os.path.join(os.getcwd(), 'src'))
 
+import cv2
+import matplotlib.pyplot as plt
+import numpy as np
 import torch
 from tqdm.auto import tqdm
-import numpy as np
-import matplotlib.pyplot as plt
-import cv2
-from utils import region_proposal, non_max_suppression, plot_one_box
+
+from utils import non_max_suppression, plot_one_box, region_proposal
+
 
 def refine_bbox(bbox, delta):
     x, y, w, h = bbox

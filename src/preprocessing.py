@@ -1,12 +1,14 @@
-import random
 import os
-from tqdm.auto import tqdm
-import pandas as pd
-import cv2
-import numpy as np
+import random
 import xml.etree.ElementTree as ET
 
-from utils import parse_annotation, calculate_IoU, region_proposal
+import cv2
+import numpy as np
+import pandas as pd
+from tqdm.auto import tqdm
+
+from utils import calculate_IoU, parse_annotation, region_proposal
+
 
 def parse_annotation(xml_path, classes):
     """Parse the xml file and return the image and bounding boxes
