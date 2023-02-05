@@ -154,7 +154,7 @@ def non_max_suppression(boxes, probs=None, overlapThresh=0.2):
             np.where(overlap > overlapThresh)[0])))
         
     # return only the bounding boxes that were picked
-    return boxes[pick].astype("int")
+    return boxes[pick].astype("int"), probs[pick].astype("float")
 
 def plot_one_box(x, image, color=None, label=None, line_thickness=None):
     """Plots one bounding box on image img in YOLO style
