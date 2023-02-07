@@ -33,7 +33,7 @@ def load_model():
     transforms = weights.transforms()
     
     model = RCNN(backbone.features, classes)
-    model.load(os.path.join('model', 'rcnn.pth'), map_location=device)
+    model.load(os.path.join('model', 'rcnn.pth'), device=device)
     model = model.to(device)
     return model, transforms, classes, device
 

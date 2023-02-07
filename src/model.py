@@ -45,9 +45,9 @@ class RCNN(nn.Module):
         }
         torch.save(save_dict, path)
 
-    def load(self, path):
+    def load(self, path, device='cpu'):
         # load classifier and rpn only
-        checkpoint = torch.load(path)
+        checkpoint = torch.load(path, map_location=device)
         self.classifier.load_state_dict(checkpoint['classifier'])
         self.rpn.load_state_dict(checkpoint['rpn'])
         self.classes = checkpoint['classes']
